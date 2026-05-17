@@ -1,4 +1,3 @@
-import './App.css';
 import WelcomeBox from './components/WelcomeBox';
 
 const App = () => {

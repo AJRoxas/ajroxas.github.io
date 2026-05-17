@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+@theme {
+  --color-off-white: #eee;
+  --color-off-black: #222;
+  --color-bright-blue: #11c6f8;
+  --color-bright-pink: #ea6ee2;
+  --color-bright-teal: #5fe6c0;
+  --color-bright-yellow: #ffe942;
+
+  --breakpoint-s720: 45rem;
+  --breakpoint-s1440: 90rem;
+
+  --spacing-s720: 45rem;
+  --spacing-s1440: 90rem;
+
+  --font-sync: "Syncopate", sans-serif;
+  --font-mont: "Montserrat", sans-serif;
+
+  --animate-marquee: marquee 20s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  --stroke-none: unset;
+}
+
+@utility text-stroke-* {
+  -webkit-text-stroke-width: calc(--value(integer) * 0.5px);
+  -webkit-text-stroke-width: --value(--stroke-*, [*]);
+
+  --tw-stroke-color: --value(--color-*);
+  -webkit-text-stroke-color: var(--tw-stroke-color, black);
+
+  &::selection {
+    background-color: var(--tw-stroke-color, black);
+    --tw-selection-color: --modifier(--color-*);
+    text-shadow: 0 0 0 var(--tw-selection-color, white);
+  }
+}
+
+
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-black bg-black  /*TODO: add fonts*/;
+  }
+
+  #root {
+    @apply max-w-s1440 mx-auto my-0 flex justify-center items-center;
+  }
+}
+
