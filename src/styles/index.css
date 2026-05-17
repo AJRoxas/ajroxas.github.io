@@ -20,6 +20,8 @@
 
   --animate-marquee: marquee 20s linear infinite;
 
+  --spacing-hdh: calc(100vh - 64px);
+
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -60,7 +62,7 @@
   }
 
   #root {
-    @apply max-w-s1440 mx-auto my-0 flex justify-center items-center;
+    @apply max-w-s1440 mx-auto my-0;
   }
 }
 
