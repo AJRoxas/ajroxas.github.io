@@ -3,7 +3,7 @@
 
 @theme {
   --color-off-white: #eee;
-  --color-off-black: #222;
+  --color-off-black: #111;
   --color-bright-blue: #11c6f8;
   --color-bright-pink: #ea6ee2;
   --color-bright-teal: #5fe6c0;
@@ -49,14 +49,6 @@
 
 @layer base {
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -64,7 +56,7 @@
   }
 
   body {
-    @apply text-black bg-black  /*TODO: add fonts*/;
+    @apply font-mont font-normal text-off-white bg-off-black scheme-light-dark;
   }
 
   #root {
