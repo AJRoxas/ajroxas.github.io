@@ -22,6 +22,8 @@
 
   --animate-marquee: marquee 20s linear infinite;
 
+  --background-image: url('../assets/images/background.jpg');
+
   @keyframes marquee {
     from {
       transform: translateX(0);
