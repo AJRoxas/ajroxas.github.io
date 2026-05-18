@@ -1,30 +1,21 @@
-import TitleGenerator from './components/TitleGenerator';
-import WelcomeBox from './components/WelcomeBox';
+import AboutSection from './sections/AboutSection';
+import ContactSection from './sections/ContactSection';
+import EducationSection from './sections/EducationSection';
+import Hero from './sections/Hero';
+import ProjectsSection from './sections/ProjectsSection';
+import WorkSection from './sections/WorkSection';
 
 const App = () => {
   return (
     <>
       <main className="mb-16">
-        <div className="h-hdh min-h-87 flex flex-col justify-center items-center gap-4">
-          <WelcomeBox />
-          <TitleGenerator />
-        </div>
+       <Hero />
         <div className="flex flex-col justify-center items-center gap-4">
-          <div className="container">
-            <h2>// About</h2>
-          </div>
-          <div className="container">
-            <h2>// Work</h2>
-          </div>
-          <div className="container">
-            <h2>// Projects</h2>
-          </div>
-          <div className="container">
-            <h2>// Education</h2>
-          </div>
-          <div className="container">
-            <h2>// Contact</h2>
-          </div>
+          <AboutSection />
+          <WorkSection />
+          <ProjectsSection />
+          <EducationSection />
+          <ContactSection />
         </div>
       </main>
       <footer className="fixed bottom-0 left-0 right-0 h-16 flex justify-center items-center w-full bg-off-black border-t-2">
