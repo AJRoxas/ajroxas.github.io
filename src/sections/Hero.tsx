@@ -5,7 +5,12 @@ import { generateRandomNumberFromArray } from '../utils/numberGenerator';
 
 const Hero = () => {
   const welcomeBoxBackgroundImages = ['bg-0', 'bg-1', 'bg-2', 'bg-3'];
-  const backgroundImages = ['pink', 'purple', 'blue', 'yellow'];
+  const backgroundImages = [
+    'from-bright-pink',
+    'from-bright-purple',
+    'from-bright-blue',
+    'from-bright-yellow',
+  ];
 
   const [id] = useState(() =>
     generateRandomNumberFromArray(backgroundImages.length),
@@ -13,7 +18,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`h-hdh min-h-87 bg-linear-to-b/shorter from-bright-${backgroundImages[id]} to-off-black w-dvw flex flex-col justify-center items-center gap-4`}
+      className={`h-hdh min-h-87 bg-linear-to-b/shorter ${backgroundImages[id]} to-off-black flex flex-col justify-center items-center gap-4`}
     >
       <WelcomeBox backgroundImage={welcomeBoxBackgroundImages[id]} />
       <TitleGenerator />
