@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { generateRandomNumberFromArray } from "../../utils/numberGenerator";
 
 const TitleGenerator = () => {
    
@@ -21,7 +22,7 @@ const TitleGenerator = () => {
     "It's time to D-D-D-D-DUEL!"
   ];
 
-  const [id] = useState(() => Math.floor(Math.random() * titles.length));
+  const [id] = useState(() => generateRandomNumberFromArray(titles.length));
 
   return (
     <>

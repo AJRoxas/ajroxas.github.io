@@ -22,7 +22,10 @@
 
   --animate-marquee: marquee 20s linear infinite;
 
-  --background-image: url('../assets/images/background.jpg');
+  --background-image-0: url('../assets/images/background_0.jpg');
+  --background-image-1: url('../assets/images/background_1.jpg');
+  --background-image-2: url('../assets/images/background_2.png');
+  --background-image-3: url('../assets/images/background_3.png');
 
   @keyframes marquee {
     from {
@@ -63,7 +66,7 @@
   }
 
   #root {
-    @apply max-w-s1440 mx-auto my-0;
+    @apply mx-auto my-0;
   }
 
   h2,
