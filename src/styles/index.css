@@ -105,7 +105,7 @@
 
 @layer components {
   .section-container {
-    @apply w-full max-w-s1260 p-4 flex flex-col gap-8;
+    @apply w-full max-w-s1560 p-4 flex flex-col items-center gap-8;
   }
 
   .content-box {
