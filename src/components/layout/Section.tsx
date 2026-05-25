@@ -7,8 +7,10 @@ interface SectionProps {
 const Section = ({ id, title, children }: SectionProps) => {
   return (
     <section id={id} className="section-container">
-      <h2>{title}</h2>
-      <div className="w-full flex flex-col items-center gap-8">{children}</div>
+      <div className="flex justify-center">
+        <h2 className="max-w-s1080">{title}</h2>
+      </div>
+      <div className="flex flex-col items-center gap-8">{children}</div>
     </section>
   );
 };

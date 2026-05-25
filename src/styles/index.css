@@ -14,7 +14,9 @@
   --breakpoint-s1440: 90rem;
 
   --spacing-s720: 45rem;
+  --spacing-s1260: 78.75rem;
   --spacing-s1440: 90rem;
+  --spacing-s1560: 97.5rem;
   --spacing-hdh: calc(100vh - 64px);
 
   --font-sync: 'Syncopate', sans-serif;
@@ -61,6 +63,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  * {
+    width: inherit;
+    height: inherit;
+  }
+
   body {
     @apply font-mont font-normal text-off-white bg-off-black scheme-light-dark;
   }
@@ -98,7 +105,7 @@
 
 @layer components {
   .section-container {
-    @apply w-full max-w-s1440 p-4 flex flex-col gap-8;
+    @apply w-full max-w-s1260 p-4 flex flex-col gap-8;
   }
 
   .content-box {

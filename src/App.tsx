@@ -8,7 +8,7 @@ import WorkSection from './sections/WorkSection';
 const App = () => {
   return (
     <>
-      <main className="mb-16">
+      <main className="mb-32">
        <Hero />
         <div className="flex flex-col justify-center items-center gap-4">
           <AboutSection />
