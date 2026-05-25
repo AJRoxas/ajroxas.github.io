@@ -2,7 +2,7 @@ import Section from '../components/layout/Section';
 
 const AboutSection = () => {
   return (
-    <Section title="// About">
+    <Section id="about" title="// About">
       <div className="content-box shadow-bright-blue">
         <h3>Hi!</h3>
         <p>

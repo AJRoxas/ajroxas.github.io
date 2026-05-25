@@ -3,7 +3,7 @@ import ActivityContent from '../components/ui/ActivityContent';
 
 const WorkSection = () => {
   return (
-    <Section title="// Work">
+    <Section id="work" title="// Work">
       <ActivityContent
         className="shadow-bright-pink"
         heading="Amazon"

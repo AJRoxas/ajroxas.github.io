@@ -2,7 +2,7 @@ import Section from '../components/layout/Section';
 
 const ContactSection = () => {
   return (
-    <Section title="// Contact">
+    <Section id="contact" title="// Contact">
       <div className="content-box shadow-bright-teal text-center">
         <h3>Email</h3>
         <p>

@@ -3,7 +3,7 @@ import ActivityContent from '../components/ui/ActivityContent';
 
 const ProjectsSection = () => {
   return (
-    <Section title="// Projects">
+    <Section id="projects" title="// Projects">
       <ActivityContent
         className="shadow-bright-purple"
         heading="Fitbook"
