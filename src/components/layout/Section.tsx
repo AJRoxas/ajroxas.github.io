@@ -8,7 +8,7 @@ const Section = ({ id, title, children }: SectionProps) => {
   return (
     <section id={id} className="section-container">
       <h2 className="max-w-s1260">{title}</h2>
-      <div className="flex flex-col items-center gap-8">{children}</div>
+      <div className="flex flex-col items-center gap-16">{children}</div>
     </section>
   );
 };
