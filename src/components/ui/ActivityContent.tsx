@@ -1,26 +1,33 @@
+import SectionContent from './SectionContent';
+
 interface ActivityContentProps {
-  heading: string;
-  subheading: string;
+  title: string;
+  subtitle: string;
   duration: string;
   responsibilities: string[];
-  className?: string;
+  reverse?: boolean;
 }
 
-const ActivityContent = ({ heading, subheading, duration, responsibilities, className }: ActivityContentProps) => {
+const ActivityContent = ({
+  title,
+  subtitle,
+  duration,
+  responsibilities,
+  reverse,
+}: ActivityContentProps) => {
   return (
-    <div className={`content-box ${className}`}>
-      <h3>{heading}</h3>
+    <SectionContent title={title} reverse={reverse}>
       <p>
-        {subheading}
+        {subtitle}
         <br />
-        {duration}  
+        {duration}
       </p>
       <ul>
         {responsibilities.map((resp, index) => (
           <li key={index}>{resp}</li>
         ))}
       </ul>
-    </div>
+    </SectionContent>
   );
 };
 

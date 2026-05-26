@@ -1,10 +1,10 @@
 import Section from '../components/layout/Section';
+import SectionContent from '../components/ui/SectionContent';
 
 const AboutSection = () => {
   return (
     <Section id="about" title="// About">
-      <div className="content-box shadow-bright-blue text-center">
-        <h3>Hi!</h3>
+      <SectionContent title="Hi There!">
         <p>
           I’m Aliel Jacob Roxas! I’m a full-stack software developer, currently
           working as a Software Development Engineer at Amazon.
@@ -43,7 +43,7 @@ const AboutSection = () => {
             Email: alieljacob.roxas@alumni.utoronto.ca
           </a>
         </p>
-      </div>
+      </SectionContent>
     </Section>
   );
 };

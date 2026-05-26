@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className={`h-hdh min-h-87 bg-linear-to-b/shorter ${backgroundImages[id]} to-off-black flex flex-col justify-center items-center gap-4`}
+      className={`h-hdh min-h-87 mb-16 bg-linear-to-b/shorter ${backgroundImages[id]} to-off-black flex flex-col justify-center items-center gap-4`}
     >
       <WelcomeBox backgroundImage={welcomeBoxBackgroundImages[id]} />
       <TitleGenerator />

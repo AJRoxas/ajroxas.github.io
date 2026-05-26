@@ -3,7 +3,7 @@ import Section from '../components/layout/Section';
 const EducationSection = () => {
   return (
     <Section id="education" title="// Education">
-      <div className="content-box shadow-bright-blue text-center">
+      <div className="content-box text-center">
         <h3>University of Toronto</h3>
         <p>September 2019 - January 2025</p>
         <p>
@@ -25,7 +25,7 @@ const EducationSection = () => {
           Learning Theory &middot; Software Design &middot; Time Series Analysis
         </p>
       </div>
-      <div className="content-box shadow-bright-pink text-center">
+      <div className="content-box text-center">
         <h3>Neil McNeil High School</h3>
         <p>September 2015 - June 2019</p>
         <p>
