@@ -18,9 +18,11 @@ const ActivityContent = ({
   return (
     <SectionContent title={title} reverse={reverse}>
       <p>
-        {subtitle}
-        <br />
-        {duration}
+        <b>
+          {subtitle}
+          <br />
+          {duration}
+        </b>
       </p>
       <ul>
         {responsibilities.map((resp, index) => (
