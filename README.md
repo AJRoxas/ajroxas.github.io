@@ -1,7 +1,5 @@
 <p align='center'>🌐<b>Visit my personal site at: <a href="https://ajroxas.github.io/">ajroxas.github.io</a></b>🌐</p>
 
-<p align='center'>👷<i>Still WIP</i>👷</p>
-
 # Personal Site
 
 Hi! This is the repository for my personal site!
@@ -14,7 +12,6 @@ This repository follows CI/CD practices by using Github Actions to:
 
 ## Built Width
 
-- animejs
 - Docker
 - Figma
 - React
