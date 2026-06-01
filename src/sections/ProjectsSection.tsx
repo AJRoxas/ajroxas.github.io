@@ -1,28 +1,23 @@
 import Section from '../components/layout/Section';
 import ActivityContent from '../components/ui/ActivityContent';
+import { workExperiences } from '../constants/workExperiences';
+import { projects } from '../constants/projects';
 
 const ProjectsSection = () => {
+  const workExperiencesLength = workExperiences?.length || 0;
+
   return (
     <Section id="projects" title="// Projects">
-      <ActivityContent
-        title="Personal Portfolio"
-        subtitle="Personal Project - This Website!"
-        duration="February 2026 - Present"
-        responsibilities={[
-          'Designed and created a personal portfolio in the React framework to showcase qualifications and skills',
-          'Implemented and automated deployment workflows using Docker and GitHub Pages',
-        ]}
-      />
-      <ActivityContent
-        reverse={true}
-        title="Fitbook"
-        subtitle="University Project"
-        duration="May 2023 - August 2023"
-        responsibilities={[
-          'Built a fitness social media app with workout and progress tracking using React Native for iOS and Android.',
-          'Implemented a RESTful API with Node.js, Express.js, and Mongoose to connect to a MongoDB database.',
-        ]}
-      />
+      {projects.map((project, index) => (
+        <ActivityContent
+          key={index}
+          reverse={(workExperiencesLength + index) % 2 === 0}
+          title={project.project}
+          subtitle={project.projectType}
+          duration={project.duration}
+          responsibilities={project.description}
+        />
+      ))}
     </Section>
   );
 };
