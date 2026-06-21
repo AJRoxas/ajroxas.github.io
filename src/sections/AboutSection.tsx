@@ -45,6 +45,14 @@ const AboutSection = () => {
           <a href="mailto:alieljacob.roxas@alumni.utoronto.ca">
             Email: alieljacob.roxas@alumni.utoronto.ca
           </a>
+          <br />
+          <a
+            href="https://drive.google.com/file/d/1Q_wywC3EzaAE-mIpICh8Wrrd-4vTrqrH/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
         </p>
       </SectionContent>
       <div className="w-full max-w-s1260 mx-auto grid grid-cols-1 md:grid-cols-2 3 gap-8">
