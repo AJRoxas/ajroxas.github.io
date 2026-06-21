@@ -11,12 +11,12 @@ export const projects: project[] = [
     projectType: 'Personal Project - This Website!',
     duration: 'February 2026 - Present',
     description: [
-      'Designed and created a personal portfolio in the React framework to showcase qualifications and skills',
-      'Implemented and automated deployment workflows using Docker and GitHub Pages',
+      'Designed and created a personal portfolio in the React framework to showcase qualifications and skills.',
+      'Implemented and automated deployment workflows using Docker and GitHub Pages.',
     ],
   },
   {
-    project: 'Fitbook',
+    project: 'FitBook',
     projectType: 'University Project',
     duration: 'May 2023 - August 2023',
     description: [

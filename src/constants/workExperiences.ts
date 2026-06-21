@@ -11,9 +11,9 @@ export const workExperiences: workExperience[] = [
     company: 'Amazon',
     duration: 'June 2025 - Present',
     responsibilities: [
-      'Implemented automated infrastructure-as-code monitoring for the Alexa+ Control Plane with AWS Lambda, CloudWatch, and CDK-based infrastructure, accelerating incident detection and monitoring maintainability.',
-      'Built Java services that support LLM experimentation and safe model rollouts for the Alexa+ platform, enabling faster, lower-risk model testing across downstream services.',
-      'Authored technical design documents with cost analysis, risk assessment, and remediation plans, which were approved and reviewed by principal engineers, ultimately guiding cross-team deployments.',
+      'Owned the integration surface for the platform\'s A/B experimentation framework, implementing experiment resolution and injection, and authoring technical design documents, ensuring safe LLM model testing and rollout.',
+      'Built automated infrastructure-as-code monitoring for the control plane using Java, AWS Lambda, CloudWatch, and CDK, proactively establishing key metrics and audit tooling to maintain system health and incident detection.',
+      'Re-engineered client library to filter its in-memory cache, reducing client heap ~50% and downstream service\'s heap ~13%, while authoring an operating procedure to maintain long-term cache health.',
     ],
   },
   {
