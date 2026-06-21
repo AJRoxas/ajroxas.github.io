@@ -26,32 +26,36 @@ const AboutSection = () => {
           designing data structures.
         </p>
         <p>
+          <b>LinkedIn: </b>
           <a
             href="https://www.linkedin.com/in/aliel-jacob-roxas/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            /in/aliel-jacob-roxas/
           </a>
           <br />
+          <b>GitHub: </b>
           <a
             href="https://github.com/AJRoxas"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            AJRoxas
           </a>
           <br />
+          <b>Email: </b>
           <a href="mailto:alieljacob.roxas@alumni.utoronto.ca">
-            Email: alieljacob.roxas@alumni.utoronto.ca
+            alieljacob.roxas@alumni.utoronto.ca
           </a>
           <br />
+          <b>Resume: </b>
           <a
             href="https://drive.google.com/file/d/1Q_wywC3EzaAE-mIpICh8Wrrd-4vTrqrH/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            Google Drive
           </a>
         </p>
       </SectionContent>
