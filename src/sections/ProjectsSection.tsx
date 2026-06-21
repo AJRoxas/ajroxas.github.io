@@ -16,6 +16,7 @@ const ProjectsSection = () => {
           subtitle={project.projectType}
           duration={project.duration}
           responsibilities={project.description}
+          link={project.link}
         />
       ))}
     </Section>

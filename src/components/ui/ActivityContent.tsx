@@ -6,6 +6,7 @@ interface ActivityContentProps {
   duration: string;
   responsibilities: string[];
   reverse?: boolean;
+  link?: { label: string; href: string; text: string };
 }
 
 const ActivityContent = ({
@@ -14,6 +15,7 @@ const ActivityContent = ({
   duration,
   responsibilities,
   reverse,
+  link,
 }: ActivityContentProps) => {
   return (
     <SectionContent title={title} reverse={reverse}>
@@ -29,6 +31,14 @@ const ActivityContent = ({
           <li key={index}>{resp}</li>
         ))}
       </ul>
+      {link && (
+        <p>
+          <b>{link.label}: </b>
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.text}
+          </a>
+        </p>
+      )}
     </SectionContent>
   );
 };

@@ -3,6 +3,7 @@ interface project {
   projectType: string;
   duration: string;
   description: string[];
+  link?: { label: string; href: string; text: string };
 }
 
 export const projects: project[] = [
@@ -14,6 +15,11 @@ export const projects: project[] = [
       'Designed and created a personal portfolio in the React framework to showcase qualifications and skills.',
       'Implemented and automated deployment workflows using Docker and GitHub Pages.',
     ],
+    link: {
+      label: 'GitHub Repo',
+      href: 'https://github.com/AJRoxas/ajroxas.github.io',
+      text: 'AJRoxas/ajroxas.github.io',
+    },
   },
   {
     project: 'FitBook',
