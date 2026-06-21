@@ -28,7 +28,9 @@ const Navbar = () => {
       <div className="w-full max-w-s1560 h-fit flex justify-center items-center px-4 md:px-8">
         <div className="w-1/2 h-fit flex justify-start items-center">
           <a href="#hero" className="w-fit h-fit font-sync font-bold text-xl no-underline">
-            AJR
+            <span className="text-bright-blue">A</span>
+            <span className="text-bright-yellow">J</span>
+            <span className="text-bright-pink">R</span>
           </a>
         </div>
 
