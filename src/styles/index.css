@@ -4,6 +4,7 @@
 @theme {
   --color-off-white: #eee;
   --color-off-black: #111;
+  --color-off-black-90: rgb(17 17 17 / 0.9);
   --color-bright-blue: #11c6f8;
   --color-bright-pink: #ea6ee2;
   --color-bright-teal: #5fe6c0;

@@ -14,7 +14,7 @@ const Hero = () => {
       id="hero"
       className={`h-dvh min-h-87 mb-16 ${heroBackgroundImages[id]} bg-center bg-cover flex flex-col justify-center items-center`}
     >
-      <div className="w-full pt-2 h-fit bg-off-black">
+      <div className="w-full pt-2 h-fit bg-off-black-90">
         <h1 className="text-center my-4">
           Aliel Jacob Roxas
         </h1>

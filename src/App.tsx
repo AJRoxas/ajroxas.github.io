@@ -1,13 +1,16 @@
 import AboutSection from './sections/AboutSection';
 import ContactSection from './sections/ContactSection';
 import EducationSection from './sections/EducationSection';
+import Footer from './components/layout/Footer';
 import Hero from './sections/Hero';
+import Navbar from './components/layout/Navbar';
 import ProjectsSection from './sections/ProjectsSection';
 import WorkSection from './sections/WorkSection';
 
 const App = () => {
   return (
     <>
+      <Navbar />
       <main className="mb-32">
        <Hero />
         <div className="flex flex-col justify-center items-center gap-4">
@@ -18,9 +21,7 @@ const App = () => {
           <ContactSection />
         </div>
       </main>
-      <footer className="fixed bottom-0 left-0 right-0 h-16 flex justify-center items-center w-full bg-off-black/90">
-        &copy; 2026-Present Aliel Jacob Roxas :)
-      </footer>
+      <Footer />
     </>
   );
 };
