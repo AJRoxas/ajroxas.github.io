@@ -24,6 +24,14 @@
   --font-sync: 'Syncopate', sans-serif;
   --font-mont: 'Montserrat', sans-serif;
 
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
   --background-image-hero-0: url('../assets/images/hero_0.webp');
   --background-image-hero-1: url('../assets/images/hero_1.webp');
   --background-image-hero-2: url('../assets/images/hero_2.webp');

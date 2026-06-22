@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
-import { generateRandomNumberFromArray } from '../../utils/numberGenerator';
+import {
+  generateRandomNumber,
+  generateRandomNumberFromArray,
+} from '../../utils/numberGenerator';
 
 const titles = [
   'Software Developer',
-  'Data Science + Statistics',
+  'Stats Grad',
+  'Data Sci & ML Specialist',
+  'UofT Grad',
   'QA Engineer',
-  'Heat Fan',
+  'Heat Lifer',
   'Raptors Fan',
   'Sports Spectator',
   "Gotta catch 'em all!",
@@ -33,7 +38,6 @@ const TitleGenerator = () => {
 
   const [isReversed, setIsReversed] = useState(false);
 
-  const animationLengthMs = 75;
   const pauseMs = 500;
 
   useEffect(() => {
@@ -50,6 +54,11 @@ const TitleGenerator = () => {
       return () => clearTimeout(timeout);
     }
 
+    // Jitter the per-keystroke speed so it feels hand-typed (deleting is faster)
+    const keystrokeMs = isReversed
+      ? generateRandomNumber(70, 30)
+      : generateRandomNumber(110, 45);
+
     timeout = setTimeout(() => {
       setCurrentTitle((previousTitle) => {
         if (isReversed && previousTitle.length > 0) {
@@ -60,19 +69,28 @@ const TitleGenerator = () => {
           return fullTitle.substring(0, previousTitle.length + 1);
         }
 
-        const nextId = generateRandomNumberFromArray(titles.length)
+        // Pick a new title, never repeating the one that just finished
+        let nextId = generateRandomNumberFromArray(titles.length);
+        if (nextId === currentTitleId) {
+          nextId = (nextId + 1) % titles.length;
+        }
 
         setIsReversed(false);
         setCurrentTitleId(nextId);
 
         return titles[nextId].substring(0, 1);
       });
-    }, animationLengthMs);
+    }, keystrokeMs);
 
     return () => clearTimeout(timeout);
   }, [currentTitleId, currentTitle.length, isReversed]);
 
-  return <p className="h-8 text-center text-2xl">{currentTitle}|</p>;
+  return (
+    <p className="h-8 text-center text-2xl">
+      {currentTitle}
+      <span className="animate-blink">|</span>
+    </p>
+  );
 };
 
 export default TitleGenerator;
