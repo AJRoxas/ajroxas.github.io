@@ -24,9 +24,9 @@
   --font-sync: 'Syncopate', sans-serif;
   --font-mont: 'Montserrat', sans-serif;
 
-  --background-image-hero-0: url('../assets/images/hero_0.png');
-  --background-image-hero-1: url('../assets/images/hero_1.jpg');
-  --background-image-hero-2: url('../assets/images/hero_2.png');
+  --background-image-hero-0: url('../assets/images/hero_0.webp');
+  --background-image-hero-1: url('../assets/images/hero_1.webp');
+  --background-image-hero-2: url('../assets/images/hero_2.webp');
   --background-image-0: url('../assets/images/background_0.jpg');
   --background-image-1: url('../assets/images/background_1.jpg');
   --background-image-2: url('../assets/images/background_2.png');
