@@ -32,6 +32,8 @@
     }
   }
 
+  /* Scroll reveal for each section. The useInView hook adds animate-fade-up
+     the first time a section enters the viewport. */
   --animate-fade-up: fade-up 1s ease-out both;
 
   @keyframes fade-up {
@@ -43,6 +45,59 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  /* Page-load entrance for the three dark bars (navbar, hero band, footer).
+     The bars wipe in left to right one after another, then the content inside
+     every bar fades in together once the last bar has landed.
+
+     Each bar is two layers: a background that runs the wipe, and a content
+     layer that runs the fade. They are kept separate so the wipe doesn't drag
+     the logo/links/text along with it. The stagger comes from per-element
+     animation-delay values set on the components (Navbar, Hero, Footer), not
+     here, so this file only defines the motion, not the timing offsets.
+
+     band-in: hero band only. Scales from the left edge. Safe to scale because
+              that layer holds no text to squash.
+     wipe-in: navbar and footer bars. clip-path reveal, which leaves the bar's
+              own content undistorted (used for completeness even though their
+              content sits on a separate layer).
+     fade-in: the content layer of all three bars, delayed so they appear at
+              the same moment. */
+  --animate-band-in: band-in 0.6s ease-out both;
+
+  @keyframes band-in {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  --animate-fade-in: fade-in 0.5s ease-out both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  --animate-wipe-in: wipe-in 0.6s ease-out both;
+
+  @keyframes wipe-in {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+      clip-path: inset(0 0 0 0);
     }
   }
 

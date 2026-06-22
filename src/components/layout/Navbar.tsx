@@ -24,8 +24,9 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex justify-center items-center w-full bg-off-black-90">
-      <div className="w-full max-w-s1560 h-fit flex justify-center items-center px-4 md:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex justify-center items-center w-full">
+      <div className="absolute inset-0 w-full h-full bg-off-black-90 motion-safe:animate-wipe-in motion-safe:[animation-delay:0.2s]" />
+      <div className="relative w-full max-w-s1560 h-fit flex justify-center items-center px-4 md:px-8 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
         <div className="w-1/2 h-fit flex justify-start items-center">
           <a href="#hero" className="w-fit h-fit font-sync font-bold text-xl no-underline">
             <span className="text-bright-blue">A</span>

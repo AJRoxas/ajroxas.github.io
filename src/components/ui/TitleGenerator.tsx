@@ -25,7 +25,7 @@ const titles = [
   "It's time to D-D-D-D-DUEL!",
 ];
 
-const TitleGenerator = () => {
+const TitleGenerator = ({ startDelayMs = 0 }: { startDelayMs?: number }) => {
   const [startingId] = useState(() =>
     generateRandomNumberFromArray(titles.length),
   );
@@ -38,9 +38,22 @@ const TitleGenerator = () => {
 
   const [isReversed, setIsReversed] = useState(false);
 
+  // Hold off typing until the load-in animation has revealed the hero text
+  const [hasStarted, setHasStarted] = useState(startDelayMs === 0);
+
   const pauseMs = 500;
 
   useEffect(() => {
+    if (startDelayMs === 0) return;
+
+    const timeout = setTimeout(() => setHasStarted(true), startDelayMs);
+
+    return () => clearTimeout(timeout);
+  }, [startDelayMs]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
     const fullTitle = titles[currentTitleId];
 
     let timeout: ReturnType<typeof setTimeout>;
@@ -83,7 +96,7 @@ const TitleGenerator = () => {
     }, keystrokeMs);
 
     return () => clearTimeout(timeout);
-  }, [currentTitleId, currentTitle.length, isReversed]);
+  }, [hasStarted, currentTitleId, currentTitle.length, isReversed]);
 
   return (
     <p className="h-8 text-center text-2xl">
