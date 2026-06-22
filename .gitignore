@@ -19,6 +19,9 @@ lerna-debug.log*
 .env
 *.local
 
+# Local-only OG image template
+og-template.html
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
