@@ -58,8 +58,9 @@
      animation-delay values set on the components (Navbar, Hero, Footer), not
      here, so this file only defines the motion, not the timing offsets.
 
-     band-in: hero band only. Scales from the left edge. Safe to scale because
-              that layer holds no text to squash.
+     band-in: hero band only. Scales horizontally from whichever edge the
+              element's transform-origin sets (origin-* class). Safe to scale
+              because that layer holds no text to squash.
      wipe-in: navbar and footer bars. clip-path reveal, which leaves the bar's
               own content undistorted (used for completeness even though their
               content sits on a separate layer).

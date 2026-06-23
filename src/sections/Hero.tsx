@@ -15,7 +15,7 @@ const Hero = () => {
       className={`h-dvh min-h-87 mb-16 ${heroBackgroundImages[id]} bg-center bg-cover flex flex-col justify-center items-center`}
     >
       <div className="relative w-full h-fit">
-        <div className="absolute inset-0 w-full h-full bg-off-black-90 origin-left motion-safe:animate-band-in motion-safe:[animation-delay:0.4s]" />
+        <div className="absolute inset-0 w-full h-full bg-off-black-90 origin-right motion-safe:animate-band-in motion-safe:[animation-delay:0.7s]" />
         <div className="relative pt-2 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
           <h1 className="text-center my-4">
             Aliel Jacob Roxas
