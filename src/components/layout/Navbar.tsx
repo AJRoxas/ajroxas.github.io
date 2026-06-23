@@ -37,7 +37,11 @@ const Navbar = () => {
 
         <div className="w-1/2 h-fit hidden sm:flex justify-end items-center gap-4">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="w-fit h-fit">
+            <a
+              key={link.href}
+              href={link.href}
+              className="relative w-fit h-fit no-underline after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[linear-gradient(to_right,var(--color-bright-blue)_0_25%,var(--color-bright-pink)_25%_50%,var(--color-bright-yellow)_50%_75%,var(--color-bright-blue)_75%_100%)] after:bg-size-[400%_100%] after:transition-transform after:duration-300 after:ease-out after:content-[''] hover:after:scale-x-100 hover:after:animate-underline-slide hover:after:[animation-delay:0.3s]"
+            >
               {link.label}
             </a>
           ))}

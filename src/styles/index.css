@@ -51,6 +51,21 @@
     }
   }
 
+  /* Nav link underline on hover: solid color blocks (hard edges, no blending)
+     that slide across like a loading bar. The bar's background is an oversized
+     hard-stop gradient; sliding its position wipes one color over the next. */
+  --animate-underline-slide: underline-slide 2s linear infinite;
+
+  @keyframes underline-slide {
+    from {
+      background-position-x: 100%;
+    }
+
+    to {
+      background-position-x: 0%;
+    }
+  }
+
   /* Scroll reveal for each section. The useInView hook adds animate-fade-up
      the first time a section enters the viewport. */
   --animate-fade-up: fade-up 1s ease-out both;
