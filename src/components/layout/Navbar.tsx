@@ -28,10 +28,10 @@ const Navbar = () => {
       <div className="absolute inset-0 w-full h-full bg-off-black-90 motion-safe:animate-wipe-in motion-safe:[animation-delay:0.2s]" />
       <div className="relative w-full max-w-s1560 h-fit flex justify-center items-center px-4 md:px-8 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
         <div className="w-1/2 h-fit flex justify-start items-center">
-          <a href="#hero" className="w-fit h-fit font-sync font-bold text-xl no-underline">
-            <span className="text-bright-blue">A</span>
-            <span className="text-bright-yellow">J</span>
-            <span className="text-bright-pink">R</span>
+          <a href="#hero" className="group w-fit h-fit font-sync font-bold text-xl no-underline">
+            <span className="text-bright-blue motion-safe:group-hover:animate-ajr-rotate">A</span>
+            <span className="text-bright-yellow motion-safe:group-hover:animate-ajr-rotate motion-safe:group-hover:[animation-delay:-0.5s]">J</span>
+            <span className="text-bright-pink motion-safe:group-hover:animate-ajr-rotate motion-safe:group-hover:[animation-delay:-1s]">R</span>
           </a>
         </div>
 

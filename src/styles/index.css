@@ -32,6 +32,25 @@
     }
   }
 
+  /* Cycles a letter through the three brand colors. Each AJR letter runs this
+     on hover with a staggered negative delay so the colors appear to rotate. */
+  --animate-ajr-rotate: ajr-rotate 1.5s step-end infinite;
+
+  @keyframes ajr-rotate {
+    0%,
+    100% {
+      color: var(--color-bright-blue);
+    }
+
+    33% {
+      color: var(--color-bright-yellow);
+    }
+
+    66% {
+      color: var(--color-bright-pink);
+    }
+  }
+
   /* Scroll reveal for each section. The useInView hook adds animate-fade-up
      the first time a section enters the viewport. */
   --animate-fade-up: fade-up 1s ease-out both;
