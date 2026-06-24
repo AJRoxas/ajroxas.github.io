@@ -8,8 +8,16 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ];
 
+// Shared underline (loading-bar) styles. The "on" classes drive it for the
+// active section; the hover: variants drive the same effect on hover.
+const underlineBase =
+  "relative w-fit h-fit no-underline after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:bg-[linear-gradient(to_right,var(--color-bright-blue)_0_25%,var(--color-bright-pink)_25%_50%,var(--color-bright-yellow)_50%_75%,var(--color-bright-blue)_75%_100%)] after:bg-size-[400%_100%] motion-reduce:after:bg-none motion-reduce:after:bg-white after:transition-transform after:duration-300 after:ease-out after:content-[''] hover:after:scale-x-100 motion-safe:hover:after:animate-underline-slide hover:after:[animation-delay:0.3s]";
+const underlineOn =
+  'after:scale-x-100 motion-safe:after:animate-underline-slide after:[animation-delay:0.3s]';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState('');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -22,6 +30,33 @@ const Navbar = () => {
       window.removeEventListener('scroll', close);
     };
   }, [isOpen]);
+
+  // Mark the link active whose section crosses the vertical center of the
+  // viewport. When none does (e.g. on the hero), no link is active.
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.getElementById(link.href.slice(1)))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const centered = new Set<string>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const href = `#${entry.target.id}`;
+          if (entry.isIntersecting) centered.add(href);
+          else centered.delete(href);
+        });
+
+        setActiveHref(links.find((link) => centered.has(link.href))?.href ?? '');
+      },
+      { rootMargin: '-50% 0px -50% 0px' },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex justify-center items-center w-full">
@@ -40,7 +75,9 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="relative w-fit h-fit no-underline after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[linear-gradient(to_right,var(--color-bright-blue)_0_25%,var(--color-bright-pink)_25%_50%,var(--color-bright-yellow)_50%_75%,var(--color-bright-blue)_75%_100%)] after:bg-size-[400%_100%] after:transition-transform after:duration-300 after:ease-out after:content-[''] hover:after:scale-x-100 hover:after:animate-underline-slide hover:after:[animation-delay:0.3s]"
+              className={`${underlineBase} ${
+                activeHref === link.href ? underlineOn : 'after:scale-x-0'
+              }`}
             >
               {link.label}
             </a>
