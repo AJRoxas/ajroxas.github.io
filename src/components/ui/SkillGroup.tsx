@@ -1,12 +1,19 @@
 const SkillGroup = ({
   title,
   children,
+  className = '',
+  style,
 }: {
   title: string;
   children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }) => {
   return (
-    <div className="bg-off-white/90 text-off-black rounded-md p-4 md:max-w-s720 motion-safe:hover:scale-105">
+    <div
+      style={style}
+      className={`bg-off-white/90 text-off-black rounded-md p-4 md:max-w-s720 motion-safe:hover:scale-105 ${className}`}
+    >
       <div className="text-center text-xl font-sync font-bold">
         <b>{title}</b>
       </div>

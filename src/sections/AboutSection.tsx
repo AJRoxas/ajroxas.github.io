@@ -3,8 +3,11 @@ import SectionContent from '../components/ui/SectionContent';
 import SkillBox from '../components/ui/SkillBox';
 import SkillGroup from '../components/ui/SkillGroup';
 import { skillGroups } from '../constants/skills';
+import { useInView } from '../hooks/useInView';
 
 const AboutSection = () => {
+  const { ref: skillsRef, inView: skillsInView } = useInView<HTMLDivElement>();
+
   return (
     <Section id="about" title="// About">
       <SectionContent title="Hi There!">
@@ -59,9 +62,21 @@ const AboutSection = () => {
           </a>
         </p>
       </SectionContent>
-      <div className="w-full max-w-s1260 mx-auto grid grid-cols-1 md:grid-cols-2 3 gap-8">
-        {skillGroups.map((group) => (
-          <SkillGroup key={group.title} title={group.title}>
+      <div
+        ref={skillsRef}
+        className="w-full max-w-s1260 mx-auto grid grid-cols-1 md:grid-cols-2 3 gap-8"
+      >
+        {skillGroups.map((group, index) => (
+          <SkillGroup
+            key={group.title}
+            title={group.title}
+            className={
+              skillsInView
+                ? 'motion-safe:animate-fade-up'
+                : 'motion-safe:opacity-0'
+            }
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
             {group.skills.map((skill) => (
               <SkillBox
                 key={skill.skill}
