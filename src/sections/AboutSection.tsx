@@ -54,7 +54,7 @@ const AboutSection = () => {
           <br />
           <b>Resume: </b>
           <a
-            href="https://drive.google.com/file/d/1Q_wywC3EzaAE-mIpICh8Wrrd-4vTrqrH/view?usp=sharing"
+            href="https://drive.google.com/file/d/1x1r2FG42kRQQm3Hn5douxDl4ilk1h-wH/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >

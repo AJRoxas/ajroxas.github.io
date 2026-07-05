@@ -12,7 +12,7 @@ export const projects: project[] = [
     projectType: 'Personal Project - This Website!',
     duration: 'February 2026 - Present',
     description: [
-      'Designed and created a personal portfolio in the React framework to showcase qualifications and skills.',
+      'Designed and created a personal portfolio in React with Tailwind CSS to showcase qualifications and skills.',
       'Implemented and automated deployment workflows using Docker and GitHub Pages.',
     ],
     link: {
