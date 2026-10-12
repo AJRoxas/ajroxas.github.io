@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { generateRandomNumberFromArray } from '../utils/numberGenerator';
 
 const Hero = () => {
-  const heroBackgroundImages = ['bg-hero-0', 'bg-hero-1', 'bg-hero-2' ];
+  const heroBackgroundImages = ['bg-hero-0', 'bg-hero-1', 'bg-hero-2'];
 
   const [id] = useState(() =>
     generateRandomNumberFromArray(heroBackgroundImages.length),
@@ -11,16 +11,13 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className={`h-dvh min-h-87 mb-16 ${heroBackgroundImages[id]} bg-center bg-cover flex flex-col justify-center items-center`}
+      className={`h-dvh min-h-87 mb-16 ${heroBackgroundImages[id]} bg-center bg-cover flex flex-col justify-end px-4 md:px-8 pb-8`}
     >
-      <div className="relative w-full h-fit">
-        <div className="absolute inset-0 w-full h-full bg-off-black-90 origin-right motion-safe:animate-band-in motion-safe:[animation-delay:0.7s]" />
-        <div className="relative pt-2 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
-          <h1 className="text-center my-4">
-            Aliel Jacob Roxas
-          </h1>
-        </div>
-      </div>
+      <h1 className="flex flex-col">
+        <span className="self-start">Aliel</span>
+        <span className="self-end">Jacob</span>
+        <span className="self-start">Roxas</span>
+      </h1>
     </section>
   );
 };
