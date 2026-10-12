@@ -13,6 +13,7 @@
 
   --breakpoint-s720: 45rem;
   --breakpoint-s1440: 90rem;
+  --breakpoint-s2400: 150rem;
 
   --spacing-s360: 22.5rem;
   --spacing-s720: 45rem;
@@ -23,6 +24,8 @@
 
   --font-archivo: 'Archivo', 'Arial Black', system-ui, sans-serif;
   --font-mont: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --leading-display: 0.85;
 
   --animate-blink: blink 1s step-end infinite;
 
@@ -136,9 +139,31 @@
     }
   }
 
-  --background-image-hero-0: url('../assets/images/hero_0.webp');
-  --background-image-hero-1: url('../assets/images/hero_1.webp');
-  --background-image-hero-2: url('../assets/images/hero_2.webp');
+  --background-image-hero-fade: linear-gradient(
+    to bottom,
+    rgb(9 8 15 / 0) 22%,
+    rgb(9 8 15 / 0.18) 36%,
+    rgb(9 8 15 / 0.45) 50%,
+    rgb(9 8 15 / 0.75) 66%,
+    rgb(9 8 15 / 0.93) 78%,
+    var(--color-night) 88%
+  );
+  --background-image-hero-fade-wide:
+    linear-gradient(
+      to right,
+      var(--color-night) 0%,
+      rgb(9 8 15 / 0.9) 10%,
+      rgb(9 8 15 / 0.66) 22%,
+      rgb(9 8 15 / 0.38) 34%,
+      rgb(9 8 15 / 0.14) 45%,
+      rgb(9 8 15 / 0) 54%
+    ),
+    linear-gradient(
+      to bottom,
+      rgb(9 8 15 / 0) 70%,
+      rgb(9 8 15 / 0.55) 86%,
+      var(--color-night) 100%
+    );
 }
 
 @utility display {
@@ -148,8 +173,15 @@
   text-transform: uppercase;
 }
 
-@layer base {
+@utility text-vw-* {
+  font-size: calc(--value(number) * 1vw);
+}
 
+@utility ml-vw-* {
+  margin-left: calc(--value(number) * 1vw);
+}
+
+@layer base {
   :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -174,11 +206,11 @@
   h1,
   h2,
   h3 {
-    @apply display;
+    @apply display leading-display;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    @apply text-vw-19 s2400:text-vw-10.5;
   }
 
   h2 {
