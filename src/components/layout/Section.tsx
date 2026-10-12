@@ -3,6 +3,7 @@ import { useInView } from '../../hooks/useInView';
 interface SectionProps {
   id: string;
   title: string;
+  headingClassName: string;
   contentClassName: string;
   className?: string;
   last?: boolean;
@@ -12,6 +13,7 @@ interface SectionProps {
 const Section = ({
   id,
   title,
+  headingClassName,
   contentClassName,
   className = '',
   last = false,
@@ -24,13 +26,11 @@ const Section = ({
     <section
       ref={ref}
       id={id}
-      className={`w-full max-w-s1560 mx-auto ${
+      className={`w-full mx-auto ${
         last ? 'min-h-[calc(100svh-4rem-var(--foot-h,120px))]' : 'min-h-svh'
-      } py-8 px-4 md:px-8 scroll-mt-16 flex flex-col justify-center items-center gap-8 ${className} ${
-        inView ? 'motion-safe:animate-fade-up' : 'motion-safe:opacity-0'
-      }`}
+      } py-24 s2400:py-45 px-4 md:px-8 scroll-mt-16 flex flex-col justify-center gap-8 ${className} ${inView ? 'motion-safe:animate-fade-up' : 'motion-safe:opacity-0'}`}
     >
-      <h2 className="max-w-s1260 text-center mb-12">{title}</h2>
+      <h2 className={`mb-12 ${headingClassName}`}>{title}</h2>
       <div className={contentClassName}>{children}</div>
     </section>
   );

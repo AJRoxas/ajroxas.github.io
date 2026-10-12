@@ -5,6 +5,7 @@ const ContactSection = () => {
     <Section
       id="contact"
       title="Contact"
+      headingClassName="text-vw-12"
       contentClassName="w-full flex flex-col items-center gap-12"
       last
     >

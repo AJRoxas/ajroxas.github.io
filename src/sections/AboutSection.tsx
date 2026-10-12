@@ -6,6 +6,8 @@ const AboutSection = () => {
     <Section
       id="about"
       title="About"
+      headingClassName="text-vw-16"
+      className="text-center"
       contentClassName="mx-auto max-w-s720 flex flex-col items-center text-center"
     >
       <p>

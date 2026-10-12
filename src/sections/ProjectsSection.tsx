@@ -10,6 +10,7 @@ const ProjectsSection = () => {
     <Section
       id="projects"
       title="Projects"
+      headingClassName="text-vw-11"
       contentClassName="w-full flex flex-col items-center gap-12"
     >
       {projects.map((project, index) => (

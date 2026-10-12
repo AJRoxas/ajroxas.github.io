@@ -7,6 +7,7 @@ const ExperienceSection = () => {
     <Section
       id="experience"
       title="Experience"
+      headingClassName="text-vw-9"
       contentClassName="w-full flex flex-col items-center gap-12"
     >
       {workExperiences.map((experience, index) => (

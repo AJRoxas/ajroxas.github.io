@@ -5,6 +5,7 @@ const EducationSection = () => {
     <Section
       id="education"
       title="Education"
+      headingClassName="text-vw-10"
       contentClassName="w-full flex flex-col items-center gap-12"
     >
       <div className="content-box text-center">
