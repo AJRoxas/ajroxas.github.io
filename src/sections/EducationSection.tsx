@@ -2,7 +2,11 @@ import Section from '../components/layout/Section';
 
 const EducationSection = () => {
   return (
-    <Section id="education" title="Education">
+    <Section
+      id="education"
+      title="Education"
+      contentClassName="w-full flex flex-col items-center gap-12"
+    >
       <div className="content-box text-center">
         <h3>University of Toronto</h3>
         <p>September 2019 - January 2025</p>
