@@ -18,7 +18,7 @@ const Section = ({ id, title, children }: SectionProps) => {
       }`}
     >
       <h2 className="max-w-s1260 text-center mb-12">{title}</h2>
-      <div className="flex flex-col items-center gap-12">{children}</div>
+      <div className="w-full flex flex-col items-center gap-12">{children}</div>
     </section>
   );
 };

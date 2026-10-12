@@ -106,7 +106,7 @@ const Navbar = () => {
         <div className="absolute top-0 left-0 right-0 h-fit overflow-hidden">
           <div
             id="mobile-menu"
-            className={`w-full h-fit bg-off-black-90 flex flex-col justify-start items-center gap-8 py-12 text-lg text-center ${
+            className={`w-full h-fit bg-off-black-90 flex flex-col justify-start items-center gap-8 py-12 text-lg text-center transition-transform duration-200 ${
               isOpen ? 'translate-y-0' : '-translate-y-full'
             }`}
           >

@@ -155,12 +155,6 @@
     }
   }
 
-  * {
-    width: inherit;
-    height: inherit;
-    transition-duration: 200ms;
-  }
-
   body {
     @apply font-mont font-normal text-off-white bg-off-black scheme-light-dark;
   }
