@@ -2,14 +2,14 @@
 @import './fonts.css';
 
 @theme {
-  --color-off-white: #eee;
-  --color-off-black: #111;
-  --color-off-black-90: rgb(17 17 17 / 0.9);
+  --color-night: #09080f;
+  --color-cream: #f5f0ed;
+  --color-gold: #d4ab64;
+  --color-plum: #2a1530;
+
   --color-bright-blue: #11c6f8;
   --color-bright-pink: #ea6ee2;
-  --color-bright-teal: #5fe6c0;
   --color-bright-yellow: #ffe942;
-  --color-bright-purple: #5c11f0;
 
   --breakpoint-s720: 45rem;
   --breakpoint-s1440: 90rem;
@@ -156,7 +156,7 @@
   }
 
   body {
-    @apply font-mont font-normal text-off-white bg-off-black scheme-light-dark;
+    @apply font-mont font-normal text-lg leading-relaxed text-cream bg-night scheme-dark overflow-x-clip;
   }
 
   #root {
