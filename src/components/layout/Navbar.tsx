@@ -25,11 +25,16 @@ const Navbar = () => {
     if (!isOpen) return;
 
     const close = () => setIsOpen(false);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close();
+    };
 
     window.addEventListener('scroll', close);
+    window.addEventListener('keydown', onKey);
 
     return () => {
       window.removeEventListener('scroll', close);
+      window.removeEventListener('keydown', onKey);
     };
   }, [isOpen]);
 
@@ -124,7 +129,8 @@ const Navbar = () => {
         <div className="absolute top-0 left-0 right-0 h-fit overflow-hidden">
           <div
             id="mobile-menu"
-            className={`w-full h-fit bg-night/90 flex flex-col justify-start items-center gap-8 py-12 text-lg font-semibold uppercase tracking-widest text-center transition-transform duration-200 ${
+            inert={!isOpen}
+            className={`w-full h-fit bg-night/90 flex flex-col justify-start items-center gap-8 py-12 text-lg font-semibold uppercase tracking-widest text-center transition-transform duration-400 ease-out-expo motion-reduce:transition-none ${
               isOpen ? 'translate-y-0' : '-translate-y-full'
             }`}
           >
