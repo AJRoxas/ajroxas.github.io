@@ -6,11 +6,11 @@ const AboutSection = () => {
     <Section
       id="about"
       title="About"
-      headingClassName="text-vw-16"
-      className="text-center"
-      contentClassName="mx-auto max-w-s720 flex flex-col items-center text-center"
+      headingClassName="text-vw-16 s2400:text-vw-8.5"
+      className="text-center s2400:grid s2400:grid-cols-2 s2400:gap-x-20 s2400:items-center s2400:text-left"
+      contentClassName="mx-auto s2400:mx-0 max-w-s720 flex flex-col items-center s2400:items-start"
     >
-      <p>
+      <p className="text-xl lg:text-2xl s1440:text-3xl font-medium">
         Hi there, it's Aliel Jacob Roxas here! I'm a full-stack software
         developer, currently working as a Software Development Engineer at
         Amazon.
@@ -27,7 +27,7 @@ const AboutSection = () => {
         assurance, as well as data analysis, machine learning, and designing
         data structures.
       </p>
-      <p className="flex flex-wrap justify-center gap-x-8">
+      <p className="flex flex-wrap justify-center s2400:justify-start gap-x-8 text-base font-semibold uppercase tracking-wider">
         <a
           href="https://www.linkedin.com/in/aliel-jacob-roxas/"
           target="_blank"

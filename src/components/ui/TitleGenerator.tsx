@@ -99,7 +99,7 @@ const TitleGenerator = ({ startDelayMs = 0 }: { startDelayMs?: number }) => {
   }, [hasStarted, currentTitleId, currentTitle.length, isReversed]);
 
   return (
-    <p className="h-8 text-center text-2xl">
+    <p className="display h-16 sm:h-20 md:h-24 mt-8 text-2xl sm:text-4xl md:text-5xl text-gold">
       {currentTitle}
       <span className="animate-blink">|</span>
     </p>
