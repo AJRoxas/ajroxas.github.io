@@ -21,8 +21,8 @@
   --spacing-s1560: 97.5rem;
   --spacing-hdh: calc(100vh - 64px);
 
-  --font-sync: 'Syncopate', sans-serif;
-  --font-mont: 'Montserrat', sans-serif;
+  --font-archivo: 'Archivo', 'Arial Black', system-ui, sans-serif;
+  --font-mont: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --animate-blink: blink 1s step-end infinite;
 
@@ -141,7 +141,15 @@
   --background-image-hero-2: url('../assets/images/hero_2.webp');
 }
 
+@utility display {
+  font-family: var(--font-archivo);
+  font-stretch: 125%;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 @layer base {
+
   :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -166,7 +174,7 @@
   h1,
   h2,
   h3 {
-    @apply font-sync font-bold;
+    @apply display;
   }
 
   h1 {

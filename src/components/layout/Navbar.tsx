@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="w-1/2 h-fit flex justify-start items-center">
           <a
             href="#hero"
-            className="group w-fit h-fit font-sync font-bold text-xl no-underline"
+            className="group w-fit h-fit display text-2xl leading-none tracking-wide no-underline"
           >
             <span className="text-bright-blue motion-safe:group-hover:animate-ajr-rotate">
               A
@@ -101,7 +101,7 @@ const Navbar = () => {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             onClick={() => setIsOpen((open) => !open)}
-            className="w-fit h-fit font-sync font-bold cursor-pointer"
+            className="w-fit h-fit text-sm font-semibold uppercase tracking-widest cursor-pointer"
           >
             {isOpen ? 'Close' : 'Menu'}
           </button>
