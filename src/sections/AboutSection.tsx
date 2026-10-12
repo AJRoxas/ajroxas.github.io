@@ -7,8 +7,8 @@ const AboutSection = () => {
       id="about"
       title="About"
       headingClassName="text-vw-16 s2400:text-vw-8.5"
-      className="text-center s2400:grid s2400:grid-cols-2 s2400:gap-x-20 s2400:items-center s2400:text-left"
-      contentClassName="mx-auto s2400:mx-0 max-w-s720 flex flex-col items-center s2400:items-start"
+      className="text-center s2400:grid s2400:grid-cols-2 s2400:gap-x-35 s2400:items-center s2400:text-left"
+      contentClassName="mx-auto s2400:mx-0 max-w-s720 s2400:max-w-none flex flex-col items-center s2400:items-start"
     >
       <p className="text-xl lg:text-2xl s1440:text-3xl font-medium">
         Hi there, it's Aliel Jacob Roxas here! I'm a full-stack software
