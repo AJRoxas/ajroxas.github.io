@@ -8,16 +8,18 @@ const ExperienceSection = () => {
       id="experience"
       title="Experience"
       headingClassName="text-vw-9"
-      contentClassName="w-full flex flex-col items-center gap-12"
+      contentClassName="w-full flex flex-col s2400:flex-row s2400:justify-center gap-24 s2400:gap-20"
     >
       {workExperiences.map((experience, index) => (
         <ActivityContent
           key={index}
-          reverse={index % 2 === 0}
+          index={index}
+          reverse={index % 2 === 1}
           title={experience.company}
           subtitle={experience.position}
           duration={experience.duration}
           responsibilities={experience.responsibilities}
+          art={experience.art}
         />
       ))}
     </Section>
