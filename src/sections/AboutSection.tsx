@@ -1,16 +1,14 @@
 import Section from '../components/layout/Section';
-import SectionContent from '../components/ui/SectionContent';
 
 const AboutSection = () => {
   return (
     <Section id="about" title="About">
-      <SectionContent title="Hi There!">
+      <div className="mx-auto max-w-s720 flex flex-col items-center text-center">
         <p>
-          I’m Aliel Jacob Roxas! I’m a full-stack software developer, currently
+          I'm Aliel Jacob Roxas! I'm a full-stack software developer, currently
           working as a Software Development Engineer at Amazon.
         </p>
         <p>
-          {' '}
           As long as I remember I always loved creating things! This lead me to
           trying out Computer Science in high school, and eventually graduating
           as a Data Science Specialist at the University of Toronto in 2025.
@@ -22,40 +20,30 @@ const AboutSection = () => {
           quality assurance, as well as data analysis, machine learning, and
           designing data structures.
         </p>
-        <p>
-          <b>LinkedIn: </b>
+        <p className="flex flex-wrap justify-center gap-x-8">
           <a
             href="https://www.linkedin.com/in/aliel-jacob-roxas/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            /in/aliel-jacob-roxas/
+            LinkedIn
           </a>
-          <br />
-          <b>GitHub: </b>
           <a
             href="https://github.com/AJRoxas"
             target="_blank"
             rel="noopener noreferrer"
           >
-            AJRoxas
+            GitHub
           </a>
-          <br />
-          <b>Email: </b>
-          <a href="mailto:alieljacob.roxas@alumni.utoronto.ca">
-            alieljacob.roxas@alumni.utoronto.ca
-          </a>
-          <br />
-          <b>Resume: </b>
           <a
             href="https://drive.google.com/file/d/1x1r2FG42kRQQm3Hn5douxDl4ilk1h-wH/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google Drive
+            Resume
           </a>
         </p>
-      </SectionContent>
+      </div>
     </Section>
   );
 };
