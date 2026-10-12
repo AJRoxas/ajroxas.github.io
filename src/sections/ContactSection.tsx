@@ -6,6 +6,7 @@ const ContactSection = () => {
       id="contact"
       title="Contact"
       contentClassName="w-full flex flex-col items-center gap-12"
+      last
     >
       <div className="max-w-s1560 flex flex-col justify-center items-center">
         <div className="content-box text-center">

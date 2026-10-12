@@ -12,14 +12,12 @@ const App = () => {
     <>
       <Navbar />
       <main>
-       <Hero />
-        <div className="flex flex-col justify-center items-center gap-4">
-          <AboutSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <EducationSection />
-          <ContactSection />
-        </div>
+        <Hero />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <EducationSection />
+        <ContactSection />
       </main>
       <Footer />
     </>
