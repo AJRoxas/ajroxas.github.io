@@ -9,7 +9,7 @@ const AboutSection = () => {
   const { ref: skillsRef, inView: skillsInView } = useInView<HTMLDivElement>();
 
   return (
-    <Section id="about" title="// About">
+    <Section id="about" title="About">
       <SectionContent title="Hi There!">
         <p>
           I’m Aliel Jacob Roxas! I’m a full-stack software developer, currently

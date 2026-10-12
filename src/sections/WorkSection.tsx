@@ -4,7 +4,7 @@ import { workExperiences } from '../constants/workExperiences';
 
 const WorkSection = () => {
   return (
-    <Section id="work" title="// Work">
+    <Section id="work" title="Work">
       {workExperiences.map((experience, index) => (
         <ActivityContent
           key={index}

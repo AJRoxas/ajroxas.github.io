@@ -7,7 +7,7 @@ const ProjectsSection = () => {
   const workExperiencesLength = workExperiences?.length || 0;
 
   return (
-    <Section id="projects" title="// Projects">
+    <Section id="projects" title="Projects">
       {projects.map((project, index) => (
         <ActivityContent
           key={index}
