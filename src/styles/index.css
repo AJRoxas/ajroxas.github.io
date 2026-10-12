@@ -22,6 +22,8 @@
 
   --leading-display: 0.85;
 
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
   --animate-blink: blink 1s step-end infinite;
 
   @keyframes blink {
@@ -77,6 +79,30 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  --animate-rise: rise 1s var(--ease-out-expo) both;
+
+  @keyframes rise {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  --animate-settle: settle 1.8s var(--ease-out-expo) both;
+
+  @keyframes settle {
+    from {
+      transform: scale(1.08);
+    }
+
+    to {
+      transform: scale(1);
     }
   }
 

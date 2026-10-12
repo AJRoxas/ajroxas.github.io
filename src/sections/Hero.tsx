@@ -19,17 +19,25 @@ const Hero = () => {
           alt={heroArt.alt}
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 size-full object-cover object-right sm:object-center"
+          className="absolute inset-0 size-full object-cover object-right sm:object-center motion-safe:animate-settle"
         />
         <div className="absolute inset-0 bg-hero-fade s2400:bg-hero-fade-wide" />
       </div>
 
       <h1 className="relative z-10 flex flex-col">
-        <span className="self-start">Aliel</span>
-        <span className="self-end s2400:self-start s2400:ml-vw-13 text-gold">
-          Jacob
+        <span className="self-start overflow-hidden">
+          <span className="block motion-safe:animate-rise">Aliel</span>
         </span>
-        <span className="self-start">Roxas</span>
+        <span className="self-end s2400:self-start s2400:ml-vw-13 text-gold overflow-hidden">
+          <span className="block motion-safe:animate-rise motion-safe:[animation-delay:0.1s]">
+            Jacob
+          </span>
+        </span>
+        <span className="self-start overflow-hidden">
+          <span className="block motion-safe:animate-rise motion-safe:[animation-delay:0.2s]">
+            Roxas
+          </span>
+        </span>
       </h1>
       <p className="relative z-10 mt-5 text-xs text-gold s2400:absolute s2400:right-8 s2400:bottom-6 s2400:m-0">
         {heroArt.title} &middot; {heroArt.artist} &middot; NASA Ames Research

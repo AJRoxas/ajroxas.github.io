@@ -83,7 +83,7 @@ const Navbar = () => {
           solid || isOpen ? '' : 'opacity-0'
         }`}
       />
-      <div className="relative w-full h-fit flex justify-center items-center px-4 md:px-8 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
+      <div className="relative w-full h-fit flex justify-center items-center px-4 md:px-8 motion-safe:animate-fade-in motion-safe:[animation-delay:0.6s]">
         <div className="w-1/2 h-fit flex justify-start items-center">
           <Logo className="text-2xl" />
         </div>
