@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Logo from '../ui/Logo';
 
 const links = [
   { href: '#about', label: 'About' },
@@ -84,20 +85,7 @@ const Navbar = () => {
       />
       <div className="relative w-full h-fit flex justify-center items-center px-4 md:px-8 motion-safe:animate-fade-in motion-safe:[animation-delay:1.3s]">
         <div className="w-1/2 h-fit flex justify-start items-center">
-          <a
-            href="#hero"
-            className="group w-fit h-fit display text-2xl leading-none tracking-wide no-underline"
-          >
-            <span className="text-bright-blue motion-safe:group-hover:animate-ajr-rotate">
-              A
-            </span>
-            <span className="text-bright-yellow motion-safe:group-hover:animate-ajr-rotate motion-safe:group-hover:[animation-delay:-0.5s]">
-              J
-            </span>
-            <span className="text-bright-pink motion-safe:group-hover:animate-ajr-rotate motion-safe:group-hover:[animation-delay:-1s]">
-              R
-            </span>
-          </a>
+          <Logo className="text-2xl" />
         </div>
 
         <div className="w-1/2 h-fit hidden sm:flex justify-end items-center gap-8">
