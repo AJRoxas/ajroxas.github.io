@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main className="mb-32">
+      <main>
        <Hero />
         <div className="flex flex-col justify-center items-center gap-4">
           <AboutSection />
