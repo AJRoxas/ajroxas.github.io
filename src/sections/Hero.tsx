@@ -1,4 +1,3 @@
-import TitleGenerator from '../components/ui/TitleGenerator';
 import { useState } from 'react';
 import { generateRandomNumberFromArray } from '../utils/numberGenerator';
 
@@ -20,7 +19,6 @@ const Hero = () => {
           <h1 className="text-center my-4">
             Aliel Jacob Roxas
           </h1>
-          <TitleGenerator startDelayMs={1300} />
         </div>
       </div>
     </section>

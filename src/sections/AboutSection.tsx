@@ -1,11 +1,12 @@
 import Section from '../components/layout/Section';
+import TitleGenerator from '../components/ui/TitleGenerator';
 
 const AboutSection = () => {
   return (
     <Section id="about" title="About">
       <div className="mx-auto max-w-s720 flex flex-col items-center text-center">
         <p>
-          I'm Aliel Jacob Roxas! I'm a full-stack software developer, currently
+          Hi there, it's Aliel Jacob Roxas here! I'm a full-stack software developer, currently
           working as a Software Development Engineer at Amazon.
         </p>
         <p>
@@ -43,6 +44,7 @@ const AboutSection = () => {
             Resume
           </a>
         </p>
+        <TitleGenerator startDelayMs={1300} />
       </div>
     </Section>
   );
