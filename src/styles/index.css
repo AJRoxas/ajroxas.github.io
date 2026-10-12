@@ -197,6 +197,6 @@
 
 @layer components {
   .content-box {
-    @apply w-full max-w-s720 px-6 py-2 md:py-4 text-wrap wrap-anywhere motion-safe:hover:scale-105;
+    @apply w-full max-w-s720 px-6 py-2 md:py-4 text-wrap wrap-anywhere;
   }
 }

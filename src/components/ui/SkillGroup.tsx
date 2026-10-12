@@ -12,7 +12,7 @@ const SkillGroup = ({
   return (
     <div
       style={style}
-      className={`bg-off-white/90 text-off-black rounded-md p-4 md:max-w-s720 motion-safe:hover:scale-105 ${className}`}
+      className={`bg-off-white/90 text-off-black rounded-md p-4 md:max-w-s720 ${className}`}
     >
       <div className="text-center text-xl font-sync font-bold">
         <b>{title}</b>
