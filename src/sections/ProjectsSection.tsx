@@ -10,6 +10,7 @@ const ProjectsSection = () => {
     <Section
       id="projects"
       title="Projects"
+      from="left"
       headingClassName="text-vw-11"
       contentClassName="w-full flex flex-col s2400:flex-row s2400:justify-center gap-24 s2400:gap-20"
     >

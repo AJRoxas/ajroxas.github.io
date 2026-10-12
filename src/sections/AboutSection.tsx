@@ -6,6 +6,7 @@ const AboutSection = () => {
     <Section
       id="about"
       title="About"
+      from="left"
       headingClassName="text-vw-16 s2400:text-vw-8.5"
       className="text-center s2400:grid s2400:grid-cols-2 s2400:gap-x-35 s2400:items-center s2400:text-left"
       contentClassName="mx-auto s2400:mx-0 max-w-s720 s2400:max-w-none flex flex-col items-center s2400:items-start"

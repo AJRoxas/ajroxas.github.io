@@ -7,6 +7,7 @@ const ExperienceSection = () => {
     <Section
       id="experience"
       title="Experience"
+      from="right"
       headingClassName="text-vw-9"
       contentClassName="w-full flex flex-col s2400:flex-row s2400:justify-center gap-24 s2400:gap-20"
     >

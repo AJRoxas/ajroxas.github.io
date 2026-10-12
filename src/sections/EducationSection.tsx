@@ -8,6 +8,7 @@ const EducationSection = () => {
     <Section
       id="education"
       title="Education"
+      from="right"
       headingClassName="text-vw-10"
       contentClassName="w-full flex flex-col items-center gap-20 text-center s2400:grid s2400:grid-cols-2 s2400:gap-x-20 s2400:items-start s2400:text-left"
     >

@@ -5,6 +5,7 @@ const ContactSection = () => {
     <Section
       id="contact"
       title="Contact"
+      from="left"
       headingClassName="text-vw-12"
       contentClassName="flex flex-col gap-7 s2400:flex-row s2400:items-baseline s2400:justify-between"
       last
