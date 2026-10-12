@@ -16,7 +16,6 @@
   --breakpoint-s2400: 150rem;
 
   --spacing-s720: 45rem;
-  --spacing-s1560: 97.5rem;
 
   --font-archivo: 'Archivo', 'Arial Black', system-ui, sans-serif;
   --font-mont: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -167,10 +166,6 @@
     @apply text-vw-19 s2400:text-vw-10.5;
   }
 
-  h3 {
-    @apply text-2xl sm:text-4xl;
-  }
-
   p,
   ul {
     @apply my-2;
@@ -182,11 +177,5 @@
 
   ul {
     @apply list-disc list-inside;
-  }
-}
-
-@layer components {
-  .content-box {
-    @apply w-full max-w-s720 px-6 py-2 md:py-4 text-wrap wrap-anywhere;
   }
 }
