@@ -6,7 +6,12 @@ const Footer = () => {
         &copy; 2026-Present <span className="text-bright-blue">A</span>liel{' '}
         <span className="text-bright-yellow">J</span>acob{' '}
         <span className="text-bright-pink">R</span>oxas :) &middot;{' '}
-        <a href="https://ajroxas.github.io/portfolio-v1/">v1</a>
+        <a
+          href="https://ajroxas.github.io/portfolio-v1/"
+          aria-label="v1, the first version of this site"
+        >
+          v1
+        </a>
       </span>
     </footer>
   );
