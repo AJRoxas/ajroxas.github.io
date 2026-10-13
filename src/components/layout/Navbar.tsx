@@ -93,7 +93,7 @@ const Navbar = () => {
           <Logo className="text-2xl" />
         </div>
 
-        <div className="w-1/2 h-fit hidden sm:flex justify-end items-center gap-8">
+        <div className="w-1/2 h-fit hidden s720:flex justify-end items-center gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -107,7 +107,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="w-1/2 h-fit flex sm:hidden justify-end items-center">
+        <div className="w-1/2 h-fit flex s720:hidden justify-end items-center">
           <button
             type="button"
             aria-expanded={isOpen}
@@ -121,7 +121,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed inset-0 top-16 z-40 sm:hidden ${
+        className={`fixed inset-0 top-16 z-40 s720:hidden ${
           isOpen ? '' : 'pointer-events-none'
         }`}
       >
