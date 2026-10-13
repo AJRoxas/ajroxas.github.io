@@ -12,7 +12,7 @@ const AboutSection = () => {
       contentClassName="mx-auto s2400:mx-0 max-w-s720 s2400:max-w-none flex flex-col items-center s2400:items-start"
     >
       <p className="text-xl lg:text-2xl s1440:text-3xl font-medium">
-        Hi there, it's Aliel Jacob Roxas here! I'm a full-stack software
+        Hi there, you can call me Jacob! I'm a full-stack software
         developer, currently working as a Software Development Engineer at
         Amazon.
       </p>
