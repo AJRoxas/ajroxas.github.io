@@ -213,6 +213,11 @@
     @apply underline underline-offset-4 decoration-gold;
   }
 
+  a,
+  button {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold;
+  }
+
   ul {
     @apply list-disc list-inside;
   }
