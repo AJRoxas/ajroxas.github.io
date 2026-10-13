@@ -2,27 +2,27 @@
 @import './fonts.css';
 
 @theme {
-  --color-off-white: #eee;
-  --color-off-black: #111;
-  --color-off-black-90: rgb(17 17 17 / 0.9);
+  --color-night: #09080f;
+  --color-cream: #f5f0ed;
+  --color-gold: #d4ab64;
+  --color-plum: #2a1530;
+
   --color-bright-blue: #11c6f8;
   --color-bright-pink: #ea6ee2;
-  --color-bright-teal: #5fe6c0;
   --color-bright-yellow: #ffe942;
-  --color-bright-purple: #5c11f0;
 
   --breakpoint-s720: 45rem;
   --breakpoint-s1440: 90rem;
+  --breakpoint-s2400: 150rem;
 
-  --spacing-s360: 22.5rem;
   --spacing-s720: 45rem;
-  --spacing-s1260: 78.75rem;
-  --spacing-s1440: 90rem;
-  --spacing-s1560: 97.5rem;
-  --spacing-hdh: calc(100vh - 64px);
 
-  --font-sync: 'Syncopate', sans-serif;
-  --font-mont: 'Montserrat', sans-serif;
+  --font-archivo: 'Archivo', 'Arial Black', system-ui, sans-serif;
+  --font-mont: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --leading-display: 0.85;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   --animate-blink: blink 1s step-end infinite;
 
@@ -66,49 +66,55 @@
     }
   }
 
-  /* Scroll reveal for each section. The useInView hook adds animate-fade-up
-     the first time a section enters the viewport. */
-  --animate-fade-up: fade-up 1s ease-out both;
+  --animate-slide-in-left: slide-in-left 1.6s var(--ease-out-expo) both;
 
-  @keyframes fade-up {
+  @keyframes slide-in-left {
     from {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateX(-25%);
     }
 
     to {
       opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  --animate-slide-in-right: slide-in-right 1.6s var(--ease-out-expo) both;
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(25%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  --animate-rise: rise 1s var(--ease-out-expo) both;
+
+  @keyframes rise {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
       transform: translateY(0);
     }
   }
 
-  /* Page-load entrance for the three dark bars (navbar, hero band, footer).
-     The bars wipe in left to right one after another, then the content inside
-     every bar fades in together once the last bar has landed.
+  --animate-settle: settle 1.8s var(--ease-out-expo) both;
 
-     Each bar is two layers: a background that runs the wipe, and a content
-     layer that runs the fade. They are kept separate so the wipe doesn't drag
-     the logo/links/text along with it. The stagger comes from per-element
-     animation-delay values set on the components (Navbar, Hero, Footer), not
-     here, so this file only defines the motion, not the timing offsets.
-
-     band-in: hero band only. Scales horizontally from whichever edge the
-              element's transform-origin sets (origin-* class). Safe to scale
-              because that layer holds no text to squash.
-     wipe-in: navbar and footer bars. clip-path reveal, which leaves the bar's
-              own content undistorted (used for completeness even though their
-              content sits on a separate layer).
-     fade-in: the content layer of all three bars, delayed so they appear at
-              the same moment. */
-  --animate-band-in: band-in 0.6s ease-out both;
-
-  @keyframes band-in {
+  @keyframes settle {
     from {
-      transform: scaleX(0);
+      transform: scale(1.08);
     }
 
     to {
-      transform: scaleX(1);
+      transform: scale(1);
     }
   }
 
@@ -124,41 +130,46 @@
     }
   }
 
-  --animate-wipe-in: wipe-in 0.6s ease-out both;
-
-  @keyframes wipe-in {
-    from {
-      clip-path: inset(0 100% 0 0);
-    }
-
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  --background-image-hero-0: url('../assets/images/hero_0.webp');
-  --background-image-hero-1: url('../assets/images/hero_1.webp');
-  --background-image-hero-2: url('../assets/images/hero_2.webp');
-  --background-image-0: url('../assets/images/background_0.jpg');
-  --background-image-1: url('../assets/images/background_1.jpg');
-  --background-image-2: url('../assets/images/background_2.png');
-  --background-image-3: url('../assets/images/background_3.png');
-
-  --stroke-none: unset;
+  --background-image-hero-fade: linear-gradient(
+    to bottom,
+    rgb(9 8 15 / 0) 22%,
+    rgb(9 8 15 / 0.18) 36%,
+    rgb(9 8 15 / 0.45) 50%,
+    rgb(9 8 15 / 0.75) 66%,
+    rgb(9 8 15 / 0.93) 78%,
+    var(--color-night) 88%
+  );
+  --background-image-hero-fade-wide:
+    linear-gradient(
+      to right,
+      var(--color-night) 0%,
+      rgb(9 8 15 / 0.9) 10%,
+      rgb(9 8 15 / 0.66) 22%,
+      rgb(9 8 15 / 0.38) 34%,
+      rgb(9 8 15 / 0.14) 45%,
+      rgb(9 8 15 / 0) 54%
+    ),
+    linear-gradient(
+      to bottom,
+      rgb(9 8 15 / 0) 70%,
+      rgb(9 8 15 / 0.55) 86%,
+      var(--color-night) 100%
+    );
 }
 
-@utility text-stroke-* {
-  -webkit-text-stroke-width: calc(--value(integer) * 0.5px);
-  -webkit-text-stroke-width: --value(--stroke-*, [*]);
+@utility display {
+  font-family: var(--font-archivo);
+  font-stretch: 125%;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-  --tw-stroke-color: --value(--color-*);
-  -webkit-text-stroke-color: var(--tw-stroke-color, black);
+@utility text-vw-* {
+  font-size: calc(--value(number) * 1vw);
+}
 
-  &::selection {
-    background-color: var(--tw-stroke-color, black);
-    --tw-selection-color: --modifier(--color-*);
-    text-shadow: 0 0 0 var(--tw-selection-color, white);
-  }
+@utility ml-vw-* {
+  margin-left: calc(--value(number) * 1vw);
 }
 
 @layer base {
@@ -175,14 +186,8 @@
     }
   }
 
-  * {
-    width: inherit;
-    height: inherit;
-    transition-duration: 200ms;
-  }
-
   body {
-    @apply font-mont font-normal text-off-white bg-off-black scheme-light-dark;
+    @apply font-mont font-normal text-lg leading-relaxed text-cream bg-night scheme-dark overflow-x-clip;
   }
 
   #root {
@@ -192,19 +197,11 @@
   h1,
   h2,
   h3 {
-    @apply font-sync font-bold;
+    @apply display leading-display;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
-  }
-
-  h2 {
-    @apply text-3xl sm:text-5xl;
-  }
-
-  h3 {
-    @apply text-2xl sm:text-4xl;
+    @apply text-vw-19 s2400:text-vw-10.5;
   }
 
   p,
@@ -213,16 +210,15 @@
   }
 
   a {
-    @apply underline underline-offset-4;
+    @apply underline underline-offset-4 decoration-gold;
+  }
+
+  a,
+  button {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold;
   }
 
   ul {
     @apply list-disc list-inside;
-  }
-}
-
-@layer components {
-  .content-box {
-    @apply w-full max-w-s720 px-6 py-2 md:py-4 text-wrap wrap-anywhere motion-safe:hover:scale-105;
   }
 }

@@ -1,7 +1,10 @@
+import { bernalInterior, cylinderInterior, type Artwork } from './art';
+
 interface project {
   project: string;
   projectType: string;
   duration: string;
+  art: Artwork;
   description: string[];
   link?: { label: string; href: string; text: string };
 }
@@ -11,6 +14,7 @@ export const projects: project[] = [
     project: 'Personal Portfolio',
     projectType: 'Personal Project - This Website!',
     duration: 'February 2026 - Present',
+    art: cylinderInterior,
     description: [
       'Designed and created a personal portfolio in React with Tailwind CSS to showcase qualifications and skills.',
       'Implemented and automated deployment workflows using Docker and GitHub Pages.',
@@ -25,6 +29,7 @@ export const projects: project[] = [
     project: 'FitBook',
     projectType: 'University Project',
     duration: 'May 2023 - August 2023',
+    art: bernalInterior,
     description: [
       'Built a fitness social media app with workout and progress tracking using React Native for iOS and Android.',
       'Implemented a RESTful API with Node.js, Express.js, and Mongoose to connect to a MongoDB database.',
