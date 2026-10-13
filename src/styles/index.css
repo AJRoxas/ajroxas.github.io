@@ -22,6 +22,9 @@
 
   --leading-display: 0.85;
 
+  --text-name: min(19vw, max(29svh, 174px));
+  --text-name-wide: min(10.5vw, max(29svh, 174px));
+
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   --animate-blink: blink 1s step-end infinite;
@@ -201,7 +204,7 @@
   }
 
   h1 {
-    @apply text-vw-19 s2400:text-vw-10.5;
+    @apply text-name s2400:text-name-wide;
   }
 
   p,
