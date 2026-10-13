@@ -84,7 +84,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex justify-center items-center w-full">
       <div
-        className={`absolute inset-0 w-full h-full bg-night/90 transition-opacity duration-300 ${
+        className={`absolute inset-0 w-full h-full bg-night/90 transition-opacity duration-400 ease-out-expo motion-reduce:transition-none ${
           solid || isOpen ? '' : 'opacity-0'
         }`}
       />
@@ -130,8 +130,8 @@ const Navbar = () => {
           <div
             id="mobile-menu"
             inert={!isOpen}
-            className={`w-full h-fit bg-night/90 flex flex-col justify-start items-center gap-8 py-12 text-lg font-semibold uppercase tracking-widest text-center transition-transform duration-400 ease-out-expo motion-reduce:transition-none ${
-              isOpen ? 'translate-y-0' : '-translate-y-full'
+            className={`w-full h-fit flex flex-col justify-start items-center gap-8 py-12 text-lg font-semibold uppercase tracking-widest text-center transition duration-400 ease-out-expo motion-reduce:transition-none ${
+              isOpen ? 'translate-y-0 bg-night/90' : '-translate-y-full'
             }`}
           >
             {links.map((link) => (
