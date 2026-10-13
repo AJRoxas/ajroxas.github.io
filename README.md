@@ -4,9 +4,10 @@
 
 Hi! This is the repository for my personal site!
 
-The motivation for creating this site is to showcase my skills and accomplishments throughout both my academic and work career. 
+The motivation for creating this site is to showcase my skills and accomplishments throughout both my academic and work career.
 
 This repository follows CI/CD practices by using Github Actions to:
+
 - Deploy and build the Docker image to Github Container Registry
 - Deploy page to GitHub Pages
 
@@ -28,6 +29,7 @@ https://ajroxas.github.io/
 Make sure node version is at least `24.x`!
 
 Run:
+
 ```
 npx vite
 ```
@@ -39,11 +41,13 @@ npx vite
 https://github.com/AJRoxas/ajroxas.github.io/pkgs/container/ajroxas.github.io
 
 Install via CLI:
+
 ```
 docker pull ghcr.io/ajroxas/ajroxas.github.io:main
 ```
 
 Run:
+
 ```
 docker run -p 8080:80 ghcr.io/USERNAME/REPO_NAME
 ```
@@ -51,12 +55,18 @@ docker run -p 8080:80 ghcr.io/USERNAME/REPO_NAME
 ### Local Docker Image
 
 Build image of local Dockerfile
+
 ```
 docker build -t ajroxas.github.io .
 ```
 
 Run:
+
 ```
 docker run -p 8080:80 ajroxas.github.io
 ```
 
+---
+
+_Art used by Rick Guidice and Don Davis, NASA Ames Research Center, 1975-78_.
+_Fonts used are Archivo and Montserrat, both under the SIL Open Font License._
