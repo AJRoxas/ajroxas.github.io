@@ -34,7 +34,7 @@ const Section = ({
       id={id}
       className={`w-full mx-auto ${
         last ? 'min-h-[calc(100svh-4rem-var(--foot-h,120px))]' : 'min-h-svh'
-      } py-24 s2400:py-45 px-4 md:px-8 scroll-mt-16 flex flex-col justify-center gap-8 ${className}`}
+      } py-24 s2400:py-45 px-4 md:px-8 scroll-mt-16 flex flex-col justify-center gap-8 overflow-x-clip ${className}`}
     >
       <h2
         ref={ref}
