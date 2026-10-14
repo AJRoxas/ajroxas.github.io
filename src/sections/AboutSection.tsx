@@ -17,7 +17,7 @@ const AboutSection = () => {
         Amazon.
       </p>
       <p>
-        As long as I remember I always loved creating things! This lead me to
+        As long as I remember I always loved creating things! This led me to
         trying out Computer Science in high school, and eventually graduating as
         a Data Science Specialist at the University of Toronto in 2025.
       </p>
