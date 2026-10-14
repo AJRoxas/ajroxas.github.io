@@ -19,7 +19,7 @@ const underlineOn =
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeHref, setActiveHref] = useState('');
-  const [solid, setSolid] = useState(false);
+  const [solid, setSolid] = useState(() => window.scrollY > 50);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -39,17 +39,11 @@ const Navbar = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    const hero = document.getElementById('hero');
-    if (!hero) return;
+    const update = () => setSolid(window.scrollY > 50);
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setSolid(!entry.isIntersecting),
-      { rootMargin: '-64px 0px 0px 0px' },
-    );
+    window.addEventListener('scroll', update, { passive: true });
 
-    observer.observe(hero);
-
-    return () => observer.disconnect();
+    return () => window.removeEventListener('scroll', update);
   }, []);
 
   // Mark the link active whose section crosses the vertical center of the
